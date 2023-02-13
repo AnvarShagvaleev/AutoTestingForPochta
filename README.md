@@ -6,6 +6,12 @@
 2. В поиске ищем **"Python 3.10"**
 3. Нажимаем кнопку "Установить", ждем окончания установки
 
+## Установка Git
+
+1. Проходим на сайт (Git)[https://git-scm.com/]
+2. Нажимаем на кнопку "Download for Windows" и ждем окончания загрузки
+3. Устанавливаем, везде прожимая "Next"
+
 ## Установка автотеста
 
 1. Ищем в меню Пуск **"Windows PowerShell"** и запускаем его
@@ -14,11 +20,10 @@
 4. Пропишите команду `git clone https://github.com/AnvarShagvaleev/AutoTestingForPochta.git`
 5. Пропишите команду 'cd .\AutoTestingForPochta\'
 6. Пропишите команду `python3.10 -m venv venv`
-7. Закрываем **"Windows PowerShell"**
-8. Пропишите команду `.\venv\Scripts\activate`
-9. Пропишите команду `pip3 install -r .\requirements.txt`
-10. Закрываем **"Windows PowerShell"**
-11. Далее откройте папку `c:/Users/user_name/Documents/PyScripts/Testing/AutoTestingForPochta` и найдите в папке Excel-файл `input.xlsx`. Откройте её и на листе `Авторизация` введите свой логин и пароль от учетной записи. Сохраните и закройте файл.
+7. Пропишите команду `.\venv\Scripts\activate`
+8. Пропишите команду `pip3 install -r .\requirements.txt`
+9. Закрываем **"Windows PowerShell"**
+10. Далее откройте папку `c:/Users/user_name/Documents/PyScripts/Testing/AutoTestingForPochta` и найдите в папке Excel-файл `input.xlsx`. Откройте её и на листе `Авторизация` введите свой логин и пароль от учетной записи. Сохраните и закройте файл.
 
 ## Запуск автотеста
 1. Ищем в меню Пуск **"Windows PowerShell"** и запускаем его
