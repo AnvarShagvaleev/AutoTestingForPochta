@@ -14,8 +14,10 @@ writer = pd.ExcelWriter("Report.xlsx", engine="xlsxwriter")
 for obj in testing_objecs:
     lm_schema_name = obj[0]
     lm_table_name = obj[1]
-    uat_schema_name = obj[2]
-    uat_table_name = obj[3]
+    sys_id = obj[2]
+    major_version = obj[3]
+    uat_schema_name = obj[4]
+    uat_table_name = obj[5]
 
     logger.info(f"Start {uat_schema_name}.{uat_table_name} testing")
     logger.info(f"Getting data from LM and UAT")
@@ -34,7 +36,7 @@ for obj in testing_objecs:
         JOIN data_catalog.lm_schema ls ON ls.schema_id = le.schema_id
         WHERE ls.schema_name IN ('{lm_schema_name}')
         AND le.entity_name IN ('{lm_table_name}')
-        AND le.major_version = 1
+        AND le.major_version = {major_version}
         AND (la.null_flag = 'N'
         OR la.pk_flag = 'Y');
         """,
@@ -74,7 +76,7 @@ for obj in testing_objecs:
         "is null"
     )
 
-    tab1_count, tab1_query, tab1 = test_number_of_entries_by_source(uat_schema_name, uat_table_name)
+    tab1_count, tab1_query, tab1 = test_number_of_entries_by_source(uat_schema_name, uat_table_name, sys_id)
     tab2_count, tab2_query = test_number_of_entries(uat_schema_name, uat_table_name)
     tab3_count, tab3_query = test_dubles(lm_data_pk_flag, uat_schema_name, uat_table_name)
 

@@ -18,7 +18,7 @@
 2. Пропишите команду `mkdir Documets\PyScripts\Testing`
 3. Пропишите команду `cd Documets\PyScripts\Testing`
 4. Пропишите команду `git clone https://github.com/AnvarShagvaleev/AutoTestingForPochta.git`
-5. Пропишите команду 'cd .\AutoTestingForPochta\'
+5. Пропишите команду `cd .\AutoTestingForPochta\`
 6. Пропишите команду `python3.10 -m venv venv`
 7. Пропишите команду `.\venv\Scripts\activate`
 8. Пропишите команду `pip3 install -r .\requirements.txt`
